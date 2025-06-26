@@ -1,0 +1,58 @@
+﻿Microservice Documentation
+1. Application Architecture Style
+Implementing Vertical Slice Architecture:
+
+Organize code into feature folders, each encapsulating a single feature in a .cs file.
+
+2. Patterns and Principles
+Utilizing several patterns and principles:
+
+CQRS Pattern: Segregates operations into commands (writes) and queries (reads).
+
+Mediator Pattern: Centralizes message mediation for better decoupling.
+
+DI in ASP.NET Core: Dependency Injection for loose coupling and testability.
+
+Minimal API and Routing in ASP.NET: Lightweight APIs for better performance.
+
+3. Libraries and NuGet Packages
+Key libraries and packages used:
+
+MediatR: For implementing the mediator pattern.
+
+Carter: Simplifies API endpoint creation.
+
+Marten: ORM for PostgreSQL, enhancing data management.
+
+Mapster: Object mapping library for seamless transformations.
+
+Fluent Validation: Provides robust input validation.
+
+4. Folder Structure
+Organized into essential folders:
+
+Model: Contains data models.
+
+Features: Feature-specific code organized by functionality.
+
+Data: Data access layer, integrating with ORM.
+
+Abstractions: Interfaces and abstractions for dependency inversion.
+
+Sample Repositories
+GitHub Repository Links:
+
+Sample Vertical Slice Architecture Implementation
+
+CQRS and MediatR Integration
+
+Usage of Carter for API Endpoints
+
+Marten ORM Integration for PostgreSQL
+
+Mapster for Object Mapping
+
+Fluent Validation in Action
+
+Conclusion
+This structured approach ensures clarity and accessibility for potential customers reviewing your microservice architecture on GitHub. Each section provides detailed insights into the architectural decisions, implemented patterns, utilized libraries, and the overall folder structure.
