@@ -8,13 +8,13 @@ namespace Catalog.Api.Products.CreateProduct
         List<string> Category,
         string Description,
         string ImageFile,
-        decimal Price) : ICommand<CreateProductResponse>;
+        decimal Price) : ICommand<CreateProductResult>;
 
-    public record CreateProductResponse(Guid Id);
+    public record CreateProductResult(Guid Id);
 
-    internal class CreateProductCommandHandler : ICommandHandler<CreateProductCommand, CreateProductResponse> 
+    internal class CreateProductCommandHandler : ICommandHandler<CreateProductCommand, CreateProductResult>
     {
-        public async Task<CreateProductResponse> Handle(CreateProductCommand command, CancellationToken cancellationToken)
+        public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
             var product = new Product()
             {
@@ -25,8 +25,7 @@ namespace Catalog.Api.Products.CreateProduct
                 Price = command.Price,
             };
 
-            return new  CreateProductResponse( Guid.NewGuid());
-          
+            return new CreateProductResult(Guid.NewGuid());
         }
     }
 }
