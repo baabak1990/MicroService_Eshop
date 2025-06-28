@@ -33,5 +33,5 @@ namespace Catalog.Api.Products.CreateProduct
            ;
         }
     }
-}
+} 
  
